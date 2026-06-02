@@ -1,8 +1,15 @@
+import { Link } from 'react-router-dom'
 import { contact } from '../data/services'
 
 const serviceLinks = [
   'Skills Audit', 'WSP & ATR', 'Employment Equity',
   'SETA Grants', 'B-BBEE Advisory', 'QCTO Accreditation',
+]
+
+const companyLinks = [
+  { label: 'About Us', to: '/about' },
+  { label: 'Our Partners', to: '/partners' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 export default function Footer() {
@@ -37,9 +44,9 @@ export default function Footer() {
           <ul className="flex flex-col gap-2.5">
             {serviceLinks.map((s) => (
               <li key={s}>
-                <a href="#services" className="text-white/50 text-[13px] hover:text-gold transition-colors duration-200">
+                <Link to="/services" className="text-white/50 text-[13px] hover:text-gold transition-colors duration-200">
                   {s}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -49,11 +56,11 @@ export default function Footer() {
         <div>
           <p className="text-[11px] font-bold text-gold tracking-[2px] uppercase mb-5">Company</p>
           <ul className="flex flex-col gap-2.5">
-            {['About Us', 'Our Partners', 'Contact'].map((s) => (
-              <li key={s}>
-                <a href={`#${s.toLowerCase().replace(' ', '')}`} className="text-white/50 text-[13px] hover:text-gold transition-colors duration-200">
-                  {s}
-                </a>
+            {companyLinks.map(({ label, to }) => (
+              <li key={label}>
+                <Link to={to} className="text-white/50 text-[13px] hover:text-gold transition-colors duration-200">
+                  {label}
+                </Link>
               </li>
             ))}
           </ul>
