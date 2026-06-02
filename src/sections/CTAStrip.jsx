@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CTAStrip() {
   return (
     <div className="bg-navy py-20 px-[5%] relative overflow-hidden">
@@ -15,9 +17,9 @@ export default function CTAStrip() {
             Upskill your workforce. Claim back what you're entitled to. Let's grow together.
           </p>
         </div>
-        <a href="#contact" className="btn-primary whitespace-nowrap flex-shrink-0">
+        <Link to="/contact" className="btn-primary whitespace-nowrap flex-shrink-0">
           Let's Grow Together
-        </a>
+        </Link>
       </div>
     </div>
   )

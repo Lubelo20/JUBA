@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const badges = [
   'Skills Development', 'HR Consulting', 'SETA Grants', 'B-BBEE Advisory',
   'Employment Equity', 'QCTO Accreditation', 'WSP & ATR', 'Tax Incentives',
@@ -35,8 +37,8 @@ export default function Hero() {
             Juba Consultants is a black female owned HR consultancy delivering world-class skills development, compliance, and training solutions across South Africa.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="#services" className="btn-primary">Our Services</a>
-            <a href="#contact" className="btn-outline">Contact Us</a>
+            <Link to="/services" className="btn-primary">Our Services</Link>
+            <Link to="/contact" className="btn-outline">Contact Us</Link>
           </div>
         </div>
 
