@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juba Consultants – Your Consulting Partner of Choice</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B2E6D;
+    --navy-dark: #071d45;
+    --gold: #C9A34E;
+    --gold-light: #dbb96a;
+    --white: #ffffff;
+    --off-white: #f8f7f4;
+    --light-gray: #f0eeea;
+    --text-dark: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --text-light: #7a7a9a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(11,46,109,0.08);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    transition: box-shadow 0.3s;
+  }
+
+  nav.scrolled { box-shadow: 0 2px 24px rgba(11,46,109,0.1); }
+
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .nav-logo .logo-juba {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: 4px;
+  }
+
+  .nav-logo .logo-sub {
+    font-size: 8px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 2px 0;
+    margin-top: 3px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-mid);
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold) !important; }
+  .nav-cta::after { display: none !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 60%;
+    height: 130%;
+    background: rgba(201,163,78,0.06);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 40%;
+    height: 8px;
+    background: var(--gold);
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 .accent {
+    color: var(--gold);
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 2px solid var(--gold);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .hero-stat {
+    background: rgba(255,255,255,0.04);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 36px;
+    margin-bottom: 32px;
+  }
+
+  .hero-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge {
+    background: rgba(201,163,78,0.15);
+    border: 1px solid rgba(201,163,78,0.3);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ─── SECTION SHARED ─── */
+  section { padding: 100px 5%; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* ─── ABOUT ─── */
+  .about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-content {}
+
+  .about-body {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .pillar {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 16px 18px;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .pillar-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .pillar-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-card-main {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 44px 40px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card-main::before {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 120px; height: 80px;
+    background: var(--gold);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+
+  .about-card-main .big-text {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .about-card-main .big-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  .about-card-main .quote {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .about-card-main .quote-author {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  .about-badge-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .about-badge {
+    background: var(--white);
+    border: 1px solid rgba(11,46,109,0.15);
+    border-radius: 6px;
+    padding: 14px 18px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .about-badge-icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .about-badge-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* ─── SERVICES ─── */
+  .services { background: var(--white); }
+
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    gap: 32px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .service-card {
+    border: 1px solid rgba(11,46,109,0.1);
+    border-radius: 10px;
+    padding: 32px 28px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(11,46,109,0.2);
+    box-shadow: 0 8px 32px rgba(11,46,109,0.08);
+    transform: translateY(-4px);
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(11,46,109,0.06);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .service-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.65;
+  }
+
+  .services-extra {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .extra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(255,255,255,0.8);
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .extra-item::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── PARTNERS ─── */
+  .partners { background: var(--off-white); }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+  }
+
+  .partner-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 36px 32px;
+    text-align: center;
+    border: 1px solid rgba(11,46,109,0.08);
+    transition: all 0.3s;
+  }
+
+  .partner-card:hover {
+    box-shadow: 0 8px 32px rgba(11,46,109,0.08);
+    transform: translateY(-3px);
+  }
+
+  .partner-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(11,46,109,0.07);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+  }
+
+  .partner-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .partner-desc {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.65;
+  }
+
+  /* ─── CTA STRIP ─── */
+  .cta-strip {
+    background: var(--navy);
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-strip::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 300px; height: 100%;
+    background: var(--gold);
+    opacity: 0.08;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .cta-text h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .cta-text p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ─── CONTACT ─── */
+  .contact { background: var(--white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info {}
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(11,46,109,0.08);
+  }
+
+  .contact-detail:last-child { border-bottom: none; }
+
+  .contact-detail-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(11,46,109,0.07);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .contact-detail-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .contact-detail-value {
+    font-size: 14px;
+    color: var(--navy);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .contact-form {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: 40px 36px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid rgba(11,46,109,0.15);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--navy);
+  }
+
+  .form-textarea { min-height: 120px; resize: vertical; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+
+  .form-submit:hover { background: var(--gold); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy-dark);
+    color: var(--white);
+    padding: 64px 5% 32px;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand {}
+
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+  }
+
+  .footer-logo-sub {
+    font-size: 8px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 2px 0;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .social-link:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-extra { grid-template-columns: repeat(2, 1fr); }
+    .partners-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .cta-inner { flex-direction: column; text-align: center; }
+    .services-header { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .services-extra { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .about-pillars { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <span class="logo-juba">JUBA</span>
+    <span class="logo-sub">CONSULTANTS</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Your Consulting Partner of Choice</p>
+      <h1>Empowering People.<br><span class="accent">Building</span> Futures.</h1>
+      <p class="hero-tagline">Juba Consultants is a black female owned HR consultancy delivering world-class skills development, compliance, and training solutions across South Africa.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="#contact" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <p class="hero-card-title">Core Expertise</p>
+        <div class="hero-badges">
+          <span class="badge">Skills Development</span>
+          <span class="badge">HR Consulting</span>
+          <span class="badge">SETA Grants</span>
+          <span class="badge">B-BBEE Advisory</span>
+          <span class="badge">Employment Equity</span>
+          <span class="badge">QCTO Accreditation</span>
+          <span class="badge">WSP & ATR</span>
+          <span class="badge">Tax Incentives</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">Gov</span>
+          <span class="hero-stat-label">Institutions</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">SME</span>
+          <span class="hero-stat-label">Enterprises</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Int'l</span>
+          <span class="hero-stat-label">Standards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-content fade-up">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">Strengthening Organisations Through People</h2>
+        <p class="about-body">Juba Skills Development Academy is a black female owned company providing comprehensive HR consultancy services and training across various domains. We serve government departments, private companies, individuals, and Small, Medium, and Micro Enterprises (SMMEs) — delivering solutions that are trusted, consistent, and memorable.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <p class="pillar-name">Professional</p>
+            <p class="pillar-desc">Strong, trustworthy brand identity built on excellence.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-name">Consistent</p>
+            <p class="pillar-desc">Unified solutions across all client touchpoints.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-name">Impactful</p>
+            <p class="pillar-desc">Measurable results that drive real organisational change.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-name">Inclusive</p>
+            <p class="pillar-desc">Aligned with B-BBEE and transformation objectives.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual fade-up">
+        <div class="about-card-main">
+          <div class="big-text">100%</div>
+          <div class="big-label">Committed to your growth</div>
+          <p class="quote">"Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training."</p>
+          <p class="quote-author">— Sinenhlanhla Khathi, Managing Director</p>
+        </div>
+        <div class="about-badge-row">
+          <div class="about-badge">
+            <div class="about-badge-icon">🏛</div>
+            <div class="about-badge-text">Government Trusted</div>
+          </div>
+          <div class="about-badge">
+            <div class="about-badge-icon">🌍</div>
+            <div class="about-badge-text">Global Standards</div>
+          </div>
+          <div class="about-badge">
+            <div class="about-badge-icon">🤝</div>
+            <div class="about-badge-text">Private Sector</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="services-header fade-up">
+      <div>
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Comprehensive HR &amp; Skills Solutions</h2>
+      </div>
+      <p class="section-sub" style="max-width: 340px;">End-to-end services covering every aspect of workforce development, compliance, and organisational growth.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">🔍</div>
+        <p class="service-name">Skills Audit</p>
+        <p class="service-desc">Identify skills gaps and opportunities to drive organisational growth and competitive performance.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📋</div>
+        <p class="service-name">Employment Skills Plan (WSP)</p>
+        <p class="service-desc">Develop effective Workplace Skills Plans aligned with business goals and regulatory compliance.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">⚖️</div>
+        <p class="service-name">Employment Equity Plan &amp; Reporting</p>
+        <p class="service-desc">Achieve equity and diversity through compliant EE planning, reporting, and transformation strategy.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📊</div>
+        <p class="service-name">Annual Training Report (ATR)</p>
+        <p class="service-desc">Stay compliant with accurate and timeous Annual Training Report submissions to your SETA.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💰</div>
+        <p class="service-name">SETA Grant Application</p>
+        <p class="service-desc">End-to-end support for successful SETA mandatory and discretionary grant applications.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🔗</div>
+        <p class="service-name">WSP &amp; ATR Linked to B-BBEE</p>
+        <p class="service-desc">Maximise B-BBEE points through strategically integrated WSP and ATR reporting.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🎓</div>
+        <p class="service-name">QCTO Accreditation</p>
+        <p class="service-desc">Expert guidance and support for QCTO accreditation, compliance, and quality management.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💹</div>
+        <p class="service-name">Tax Incentives</p>
+        <p class="service-desc">Leverage Section 12H and other tax incentives to maximise your ROI on training spend.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📅</div>
+        <p class="service-name">Monthly Training Report</p>
+        <p class="service-desc">Track progress with detailed, accurate monthly training reports for informed decision-making.</p>
+      </div>
+    </div>
+
+    <div class="services-extra fade-up">
+      <div class="extra-item">Health &amp; Safety Trainings</div>
+      <div class="extra-item">B-BBEE &amp; Skills Development</div>
+      <div class="extra-item">SETA Stakeholder Representation</div>
+      <div class="extra-item">Completion &amp; Submission of WSP &amp; ATR</div>
+      <div class="extra-item">Learnership Implementation &amp; Management</div>
+      <div class="extra-item">Workplace Skills Plan Implementation</div>
+      <div class="extra-item">Advice &amp; Assist in SETA Grants Applications</div>
+      <div class="extra-item">Follow Up on SETA Grants</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+  <div class="section-inner">
+    <div class="fade-up" style="text-align: center; max-width: 600px; margin: 0 auto 16px;">
+      <p class="section-label" style="justify-content: center;">Who We Serve</p>
+      <h2 class="section-title">We Partner With</h2>
+      <p class="section-sub" style="margin: 0 auto;">Delivering tailored solutions across government, private sector, and international organisations to drive sustainable transformation.</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card fade-up">
+        <div class="partner-icon">🏛</div>
+        <p class="partner-title">Government</p>
+        <p class="partner-desc">Delivering solutions that support national development and policy objectives. We help government departments meet their skills development and transformation mandates effectively.</p>
+      </div>
+      <div class="partner-card fade-up">
+        <div class="partner-icon">🏢</div>
+        <p class="partner-title">Private Sector</p>
+        <p class="partner-desc">Driving business performance through people, skills and compliance excellence. We partner with companies of all sizes to build capable, compliant, and competitive workforces.</p>
+      </div>
+      <div class="partner-card fade-up">
+        <div class="partner-icon">🌍</div>
+        <p class="partner-title">International Partners</p>
+        <p class="partner-desc">Aligned with global standards and best practices for sustainable impact. Our frameworks meet international benchmarks while remaining contextually relevant to South Africa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Ready to Maximise Your SETA Benefits?</h2>
+      <p>Upskill your workforce. Claim back what you're entitled to. Let's grow together.</p>
+    </div>
+    <a href="#contact" class="btn-primary" style="white-space: nowrap; flex-shrink: 0;">Let's Grow Together</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's Start the Conversation</h2>
+        <p class="section-sub" style="margin-bottom: 36px;">Whether you need skills development support, SETA grant assistance, or a full HR compliance overhaul — we're here to help.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <p class="contact-detail-label">Address</p>
+            <p class="contact-detail-value">57 Magwaza Maphalala Street<br>Berea 4001, Durban, KwaZulu-Natal</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <p class="contact-detail-label">Phone</p>
+            <p class="contact-detail-value">+27 79 351 7376</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <p class="contact-detail-label">Email</p>
+            <p class="contact-detail-value">skhathi@jubasda.co.za</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🌐</div>
+          <div>
+            <p class="contact-detail-label">Website</p>
+            <p class="contact-detail-value">www.jubaconsultants.co.za</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-up">
+        <p class="form-title">Send Us a Message</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Your first name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Your last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service of Interest</label>
+          <select class="form-select">
+            <option value="">Select a service...</option>
+            <option>Skills Audit</option>
+            <option>Employment Skills Plan (WSP)</option>
+            <option>Employment Equity Plan &amp; Reporting</option>
+            <option>SETA Grant Application</option>
+            <option>B-BBEE Advisory</option>
+            <option>QCTO Accreditation</option>
+            <option>Tax Incentives</option>
+            <option>Other / General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell us about your organisation and what you need..."></textarea>
+        </div>
+        <button class="form-submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">JUBA</div>
+      <div class="footer-logo-sub">CONSULTANTS</div>
+      <p class="footer-tagline">Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training.</p>
+      <div class="social-links">
+        <a class="social-link" href="#" aria-label="LinkedIn">in</a>
+        <a class="social-link" href="#" aria-label="Facebook">fb</a>
+        <a class="social-link" href="#" aria-label="Twitter">tw</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Services</p>
+      <ul class="footer-links">
+        <li><a href="#services">Skills Audit</a></li>
+        <li><a href="#services">WSP &amp; ATR</a></li>
+        <li><a href="#services">Employment Equity</a></li>
+        <li><a href="#services">SETA Grants</a></li>
+        <li><a href="#services">B-BBEE Advisory</a></li>
+        <li><a href="#services">QCTO Accreditation</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Company</p>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#partners">Our Partners</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Contact</p>
+      <ul class="footer-links">
+        <li><a href="tel:+27793517376">+27 79 351 7376</a></li>
+        <li><a href="mailto:skhathi@jubasda.co.za">skhathi@jubasda.co.za</a></li>
+        <li><a href="#">57 Magwaza Maphalala St, Berea 4001</a></li>
+        <li><a href="#">www.jubaconsultants.co.za</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Juba Consultants (Pty) Ltd. All rights reserved.</span>
+    <span>Juba Skills Development Academy</span>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
