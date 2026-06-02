@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Partners', href: '#partners' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  { label: 'Partners', to: '/partners' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 export default function Navbar() {
@@ -24,33 +26,39 @@ export default function Navbar() {
       }`}
     >
       {/* Logo */}
-      <a href="#home" className="flex flex-col leading-none">
+      <Link to="/" className="flex flex-col leading-none">
         <span className="text-[26px] font-extrabold text-navy tracking-[4px]">JUBA</span>
         <span className="text-[8px] font-semibold text-gold tracking-[3px] border-t border-b border-gold py-0.5 mt-0.5 uppercase">
           Consultants
         </span>
-      </a>
+      </Link>
 
       {/* Desktop links */}
       <ul className="hidden md:flex gap-9 list-none items-center">
         {links.map((link) => (
           <li key={link.label}>
-            <a
-              href={link.href}
-              className="text-[13px] font-medium text-slate-500 tracking-wide relative group transition-colors duration-200 hover:text-navy"
+            <NavLink
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `text-[13px] font-medium tracking-wide transition-colors duration-200 hover:text-navy pb-1 border-b-2 ${
+                  isActive
+                    ? 'text-navy border-gold'
+                    : 'text-slate-500 border-transparent hover:border-gold/50'
+                }`
+              }
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
-            </a>
+            </NavLink>
           </li>
         ))}
         <li>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="bg-navy text-white text-[13px] font-bold px-5 py-2.5 rounded tracking-wide hover:bg-gold hover:text-navy transition-colors duration-200"
           >
             Get In Touch
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -69,18 +77,23 @@ export default function Navbar() {
       {menuOpen && (
         <div className="absolute top-[72px] left-0 right-0 bg-white border-b border-navy/10 shadow-lg md:hidden px-[5%] py-6 flex flex-col gap-4">
           {links.map((link) => (
-            <a
+            <NavLink
               key={link.label}
-              href={link.href}
+              to={link.to}
+              end={link.to === '/'}
               onClick={() => setMenuOpen(false)}
-              className="text-[15px] font-medium text-slate-600 hover:text-navy"
+              className={({ isActive }) =>
+                `text-[15px] font-medium hover:text-navy ${
+                  isActive ? 'text-navy font-semibold' : 'text-slate-600'
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="btn-navy w-fit">
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="btn-navy w-fit">
             Get In Touch
-          </a>
+          </Link>
         </div>
       )}
     </nav>
