@@ -393,6 +393,8 @@ ul { list-style: none; }
 
 /* ─── CONTACT SECTION ─── */
 .contact-section { background: #fff; padding: 96px 5%; }
+.about-inner--single { grid-template-columns: 1fr; max-width: 720px; }
+
 .contact-inner { max-width: 640px; margin: 0 auto; }
 
 .contact-item {
