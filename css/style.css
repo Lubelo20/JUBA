@@ -281,6 +281,12 @@ ul { list-style: none; }
   background: var(--gold);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
+.about-card-photo {
+  display: block; width: 100%; height: 340px;
+  object-fit: cover; object-position: center 22%;
+  border-radius: 10px; margin-bottom: 28px;
+  border: 1px solid rgba(255,255,255,.15);
+}
 .about-card-num { font-size: 64px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 8px; }
 .about-card-sub { color: rgba(255,255,255,.7); font-size: 14px; margin-bottom: 32px; }
 .about-card-quote { font-size: 16px; font-style: italic; font-weight: 300; color: rgba(255,255,255,.9); line-height: 1.6; }
