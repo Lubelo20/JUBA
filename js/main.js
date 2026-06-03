@@ -1,14 +1,18 @@
 // Navbar scroll shadow
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 // Mobile hamburger toggle
 const hamburger = document.getElementById('hamburger');
-hamburger.addEventListener('click', () => {
-  navbar.classList.toggle('menu-open');
-});
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('menu-open');
+  });
+}
 
 // Close mobile menu on any link click inside it
 document.querySelectorAll('.nav-mobile a').forEach(link => {
