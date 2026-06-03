@@ -36,9 +36,9 @@ export default function Contact() {
         {/* Left */}
         <FadeUp>
           <p className="section-label">Get In Touch</p>
-          <h2 className="section-title">Let's Start the Conversation</h2>
+          <h2 className="section-title">Let&apos;s Start the Conversation</h2>
           <p className="section-sub mb-9">
-            Whether you need skills development support, SETA grant assistance, or a full HR compliance overhaul — we're here to help.
+            Whether you need skills development support, SETA grant assistance, or a full HR compliance overhaul — we&apos;re here to help.
           </p>
 
           {details.map((d) => (
@@ -67,7 +67,7 @@ export default function Contact() {
               <div className="text-center py-12">
                 <div className="text-4xl mb-4">✅</div>
                 <p className="text-navy font-bold text-lg mb-2">Message Sent!</p>
-                <p className="text-slate-500 text-sm">We'll get back to you as soon as possible.</p>
+                <p className="text-slate-500 text-sm">We&apos;ll get back to you as soon as possible.</p>
                 <button onClick={() => setSent(false)} className="btn-navy mt-6">Send Another</button>
               </div>
             ) : (

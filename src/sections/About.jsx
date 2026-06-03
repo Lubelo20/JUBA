@@ -45,7 +45,7 @@ export default function About() {
             <div className="text-[64px] font-extrabold text-gold leading-none mb-2">100%</div>
             <p className="text-white/70 text-[14px] mb-8">Committed to your growth</p>
             <p className="text-[16px] italic font-light text-white/90 leading-relaxed">
-              "Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training."
+              &ldquo;Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training.&rdquo;
             </p>
             <p className="mt-5 text-[13px] font-bold text-gold tracking-wide">
               — Sinenhlanhla Khathi, Managing Director

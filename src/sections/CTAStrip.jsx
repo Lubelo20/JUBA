@@ -14,11 +14,11 @@ export default function CTAStrip() {
             Ready to Maximise Your SETA Benefits?
           </h2>
           <p className="text-white/60 text-[14px]">
-            Upskill your workforce. Claim back what you're entitled to. Let's grow together.
+            Upskill your workforce. Claim back what you&apos;re entitled to. Let&apos;s grow together.
           </p>
         </div>
         <Link to="/contact" className="btn-primary whitespace-nowrap flex-shrink-0">
-          Let's Grow Together
+          Let&apos;s Grow Together
         </Link>
       </div>
     </div>
