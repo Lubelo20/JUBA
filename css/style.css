@@ -204,25 +204,24 @@ ul { list-style: none; }
   background: var(--gold);
 }
 .hero-inner {
-  max-width: 1152px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr; gap: 80px; align-items: center;
+  max-width: 720px; margin: 0 auto; width: 100%;
+  display: block;
+  text-align: center;
 }
-@media (min-width: 1024px) { .hero-inner { grid-template-columns: 1fr 1fr; } }
-
 .hero-eyebrow {
   display: flex; align-items: center; gap: 12px;
   color: var(--gold); font-weight: 600; font-size: 11px;
   letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px;
+  justify-content: center;
 }
-.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 2px; background: var(--gold); }
+.hero-buttons { justify-content: center; }
 
 .hero h1 { font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 16px; font-size: clamp(36px, 4.5vw, 56px); }
 .hero h1 span { color: var(--gold); }
-.hero-sub { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.7; margin-bottom: 40px; max-width: 512px; }
+.hero-sub { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.7; margin-bottom: 40px; }
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .hero-right { display: none; }
-@media (min-width: 1024px) { .hero-right { display: block; } }
 
 .hero-badges-box {
   background: rgba(255,255,255,.06);
@@ -332,6 +331,7 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: center;
   font-size: 22px; margin-bottom: 20px;
 }
+.service-icon i, .service-icon svg { width: 22px; height: 22px; stroke: var(--navy); stroke-width: 2; fill: none; }
 .service-name { font-size: 14px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; line-height: 1.3; margin-bottom: 12px; }
 .service-desc { font-size: 13px; color: #64748b; line-height: 1.6; }
 
