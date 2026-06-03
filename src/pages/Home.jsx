@@ -19,7 +19,7 @@ export default function Home() {
             <p className="text-slate-500 text-[15px] leading-relaxed mt-6 mb-8">
               Juba Skills Development Academy is a black female owned company providing comprehensive HR consultancy
               services and training across various domains. We serve government departments, private companies, and
-              SMMEs — delivering solutions that are trusted, consistent, and impactful.
+              SMMEs — delivering solutions that are trusted, consistent, and memorable.
             </p>
             <Link to="/about" className="btn-navy">Learn More →</Link>
           </FadeUp>
