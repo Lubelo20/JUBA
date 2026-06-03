@@ -1,25 +1,21 @@
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Hero from './sections/Hero'
-import About from './sections/About'
-import Services from './sections/Services'
-import Partners from './sections/Partners'
-import CTAStrip from './sections/CTAStrip'
-import Contact from './sections/Contact'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import AboutPage from './pages/About'
+import ServicesPage from './pages/Services'
+import PartnersPage from './pages/Partners'
+import ContactPage from './pages/Contact'
 
 export default function App() {
   return (
-    <div className="font-poppins">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Partners />
-        <CTAStrip />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="services" element={<ServicesPage />} />
+        <Route path="partners" element={<PartnersPage />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   )
 }
