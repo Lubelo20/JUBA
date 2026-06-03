@@ -184,7 +184,7 @@ ul { list-style: none; }
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
-  background: var(--navy);
+  background: linear-gradient(rgba(11,46,109,0.86), rgba(7,29,69,0.93)), url('../images/hero-bg.jpg') center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: center;
   padding: 120px 5% 80px;
   position: relative; overflow: hidden;
