@@ -1,14 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juba Consultants – Your Consulting Partner of Choice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juba Consultants – Your Consulting Partner of Choice</title>
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="logo-main">JUBA</span>
+    <span class="logo-sub">Consultants</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta btn-navy">Get In Touch</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn-navy">Get In Touch</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">Your Consulting Partner of Choice</p>
+        <h1>Empowering People.<br><span>Building</span> Futures.</h1>
+        <p class="hero-sub">Juba Consultants is a black female owned HR consultancy delivering world-class skills development, compliance, and training solutions across South Africa.</p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary">Our Services</a>
+          <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-badges-box">
+          <p class="hero-badges-title">Core Expertise</p>
+          <div class="hero-badges-list">
+            <span class="hero-badge">Skills Development</span>
+            <span class="hero-badge">HR Consulting</span>
+            <span class="hero-badge">SETA Grants</span>
+            <span class="hero-badge">B-BBEE Advisory</span>
+            <span class="hero-badge">Employment Equity</span>
+            <span class="hero-badge">QCTO Accreditation</span>
+            <span class="hero-badge">WSP &amp; ATR</span>
+            <span class="hero-badge">Tax Incentives</span>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">Gov</span>
+            <span class="hero-stat-label">Institutions</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">SME</span>
+            <span class="hero-stat-label">Enterprises</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">Int'l</span>
+            <span class="hero-stat-label">Standards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASER -->
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-left fade-up">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">Strengthening Organisations Through People</h2>
+        <p class="about-body">Juba Skills Development Academy is a black female owned company providing comprehensive HR consultancy services and training across various domains. We serve government departments, private companies, and SMMEs &mdash; delivering solutions that are trusted, consistent, and memorable.</p>
+        <a href="about.html" class="btn-navy">Learn More &rarr;</a>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="about-card">
+          <div class="about-card-num">100%</div>
+          <p class="about-card-sub">Committed to your growth</p>
+          <p class="about-card-quote">&ldquo;Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training.&rdquo;</p>
+          <p class="about-card-author">&mdash; Sinenhlanhla Khathi, Managing Director</p>
+        </div>
+        <div class="about-badges">
+          <div class="about-badge"><div class="about-badge-icon">🏛</div><div class="about-badge-label">Government Trusted</div></div>
+          <div class="about-badge"><div class="about-badge-icon">🌍</div><div class="about-badge-label">Global Standards</div></div>
+          <div class="about-badge"><div class="about-badge-icon">🤝</div><div class="about-badge-label">Private Sector</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW (first 3) -->
+  <section class="services-section">
+    <div class="services-inner">
+      <div class="services-header fade-up">
+        <div>
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title">Our Core Services</h2>
+        </div>
+        <a href="services.html" class="btn-navy">View All Services &rarr;</a>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">🔍</div>
+          <h3 class="service-name">Skills Audit</h3>
+          <p class="service-desc">Identify skills gaps and opportunities to drive organisational growth and competitive performance.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.06s">
+          <div class="service-icon">📋</div>
+          <h3 class="service-name">Employment Skills Plan (WSP)</h3>
+          <p class="service-desc">Develop effective Workplace Skills Plans aligned with business goals and regulatory compliance.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.12s">
+          <div class="service-icon">⚖️</div>
+          <h3 class="service-name">Employment Equity Plan &amp; Reporting</h3>
+          <p class="service-desc">Achieve equity and diversity through compliant EE planning, reporting, and transformation strategy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners-section">
+    <div class="partners-inner">
+      <div class="partners-header fade-up">
+        <p class="section-label">Who We Serve</p>
+        <h2 class="section-title">We Partner With</h2>
+        <p class="section-sub">Delivering tailored solutions across government, private sector, and international organisations to drive sustainable transformation.</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card fade-up">
+          <div class="partner-icon">🏛</div>
+          <h3 class="partner-title">Government</h3>
+          <p class="partner-desc">Delivering solutions that support national development and policy objectives. We help government departments meet their skills development and transformation mandates effectively.</p>
+        </div>
+        <div class="partner-card fade-up" style="transition-delay:.1s">
+          <div class="partner-icon">🏢</div>
+          <h3 class="partner-title">Private Sector</h3>
+          <p class="partner-desc">Driving business performance through people, skills and compliance excellence. We partner with companies of all sizes to build capable, compliant, and competitive workforces.</p>
+        </div>
+        <div class="partner-card fade-up" style="transition-delay:.2s">
+          <div class="partner-icon">🌍</div>
+          <h3 class="partner-title">International Partners</h3>
+          <p class="partner-desc">Aligned with global standards and best practices for sustainable impact. Our frameworks meet international benchmarks while remaining contextually relevant to South Africa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <div>
+        <h2>Ready to Maximise Your SETA Benefits?</h2>
+        <p>Upskill your workforce. Claim back what you&rsquo;re entitled to. Let&rsquo;s grow together.</p>
+      </div>
+      <a href="contact.html" class="btn-primary">Let&rsquo;s Grow Together</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-main">JUBA</div>
+      <div class="footer-logo-sub">Consultants</div>
+      <p class="footer-tagline">Empowering Excellence. Nurturing Potential. Your Gateway to Strategic HR Solutions and Professional Training.</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">fb</a>
+        <a href="#" class="social-icon">tw</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Services</p>
+      <ul>
+        <li><a href="services.html">Skills Audit</a></li>
+        <li><a href="services.html">WSP &amp; ATR</a></li>
+        <li><a href="services.html">Employment Equity</a></li>
+        <li><a href="services.html">SETA Grants</a></li>
+        <li><a href="services.html">B-BBEE Advisory</a></li>
+        <li><a href="services.html">QCTO Accreditation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Company</p>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="partners.html">Our Partners</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <ul>
+        <li><a href="tel:+27793517376">+27 79 351 7376</a></li>
+        <li><a href="mailto:skhathi@jubasda.co.za">skhathi@jubasda.co.za</a></li>
+        <li><span>57 Magwaza Maphalala Street, Berea 4001, Durban</span></li>
+        <li><a href="#">www.jubaconsultants.co.za</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Juba Consultants (Pty) Ltd. All rights reserved.</span>
+    <span>Juba Skills Development Academy</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
