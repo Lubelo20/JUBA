@@ -1,130 +1,49 @@
 # Juba Consultants Website
 
-A modern, production-ready website for **Juba Consultants** built with React + Vite + Tailwind CSS.
+Marketing site for **Juba Consultants**, a black female owned South African
+HR / skills-development consultancy. Built as a fast, static, multi-page site —
+no framework, no build step.
 
 ## Tech Stack
 
 | Tool | Purpose |
 |------|---------|
-| [React 18](https://react.dev/) | UI framework |
-| [Vite 5](https://vitejs.dev/) | Build tool & dev server |
-| [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling |
-| [Lucide React](https://lucide.dev/) | Icon library |
-| [React Router v6](https://reactrouter.com/) | Client-side routing |
+| HTML5 | Page structure (one file per page) |
+| CSS3 | Styling via `css/style.css` (custom-property design tokens) |
+| Vanilla JS | `js/main.js` — nav, scroll reveals, contact form |
+| Poppins (Google Fonts) | Typography |
+| Formspree | Contact-form delivery |
 
-## Brand Colours
+## Pages
+
+`index.html` (Home) · `about.html` · `services.html` · `contact.html`
+
+The Home page includes a "Who We Serve" section (Government / Private Sector /
+International) — there is no separate Partners page.
+
+## Brand
 
 | Name | Hex |
 |------|-----|
 | Navy | `#0B2E6D` |
 | Navy Dark | `#071d45` |
 | Gold | `#C9A34E` |
-| Gold Light | `#dbb96a` |
 
-Font: **Poppins** (300, 400, 500, 600, 700, 800)
+Design direction: **Modern Minimal** — generous whitespace, navy/gold accents,
+inline-SVG icons (no icon CDN).
 
-## Project Structure
+## Run locally
 
-```
-juba-consultants/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── assets/          # Images, logos, brand assets
-│   ├── components/
-│   │   ├── Navbar.jsx   # Fixed navigation with mobile menu
-│   │   ├── Footer.jsx   # Footer with links
-│   │   └── FadeUp.jsx   # Scroll-triggered fade animation
-│   ├── data/
-│   │   └── services.js  # All site content / data
-│   ├── hooks/
-│   │   └── useInView.js # IntersectionObserver hook
-│   ├── sections/
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Services.jsx
-│   │   ├── Partners.jsx
-│   │   ├── CTAStrip.jsx
-│   │   └── Contact.jsx
-│   ├── App.jsx
-│   ├── index.css        # Tailwind directives + custom components
-│   └── main.jsx
-├── .eslintrc.cjs
-├── .gitignore
-├── .vscode/
-│   ├── extensions.json  # Recommended VS Code extensions
-│   └── settings.json    # Editor settings
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-└── vite.config.js
-```
+No build needed. Serve the folder with any static server:
 
-## Getting Started
-
-### 1. Install dependencies
 ```bash
-npm install
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
 
-### 2. Run development server
-```bash
-npm run dev
-```
-Opens at [http://localhost:5173](http://localhost:5173)
+## Editing
 
-### 3. Build for production
-```bash
-npm run build
-```
-
-### 4. Preview production build
-```bash
-npm run preview
-```
-
-## Deployment
-
-### Vercel (recommended)
-```bash
-npm i -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-# Drag & drop the `dist/` folder to Netlify
-```
-
-### Railway
-Connect your GitHub repo and set:
-- Build Command: `npm run build`
-- Output Directory: `dist`
-
-## Customisation Guide
-
-### Update contact info
-Edit `src/data/services.js` → `contact` object
-
-### Add/edit services
-Edit `src/data/services.js` → `services` array
-
-### Brand colours
-Edit `tailwind.config.js` → `theme.extend.colors`
-
-### Add pages (e.g. About page, Blog)
-1. Create `src/pages/About.jsx`
-2. Add route in `src/App.jsx` using `<BrowserRouter>` + `<Routes>`
-
-## TODO / Next Steps
-
-- [ ] Add real team photos to `src/assets/`
-- [ ] Wire contact form to email service (EmailJS / Resend / your backend)
-- [ ] Add CMS integration for services content
-- [ ] Add Google Analytics / Meta Pixel
-- [ ] Add WhatsApp floating button
-- [ ] Create dedicated Service detail pages
-- [ ] Add testimonials section
-- [ ] SEO: add sitemap.xml and robots.txt
+- Content lives directly in each `.html` file.
+- Shared nav and footer markup is repeated in every page — update all four when
+  changing links.
+- Styling tokens are at the top of `css/style.css`.

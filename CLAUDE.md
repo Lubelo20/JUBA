@@ -1,40 +1,35 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
-## Commands
+## What this is
+
+A static, multi-page marketing site (HTML/CSS/vanilla JS) for Juba Consultants,
+a South African HR/skills-development consultancy. **No framework, no build
+step, no test suite.** Do not assume React/Vite/Tailwind.
+
+## Run / preview
 
 ```bash
-npm run dev       # start dev server at http://localhost:5173
-npm run build     # production build → dist/
-npm run preview   # preview the production build locally
-npm run lint      # ESLint — zero warnings policy (--max-warnings 0)
+python3 -m http.server 8000   # open http://localhost:8000
 ```
 
-There is no test suite configured.
+## Structure
 
-## Architecture
+- `index.html` — Home (hero → about teaser → services preview → Who We Serve → CTA)
+- `about.html` — company story, values, founder card
+- `services.html` — full services grid
+- `contact.html` — contact details + enquiry form (Formspree)
+- `css/style.css` — all styling; design tokens (`--navy`, `--gold`, …) at the top
+- `js/main.js` — nav behaviour, scroll-reveal (`.fade-up`), contact-form handling
+- `images/`, `public/favicon.svg` — assets
 
-Single-page marketing site for a South African HR/skills-development consultancy. No routing is active despite `react-router-dom` being installed — everything lives on one scroll page.
+There is no Partners page; that content is the "Who We Serve" section on Home.
 
-**Data layer:** All site content (services, partners, contact info) is centralised in `src/data/services.js`. Edit there first when copy or contact details change.
+## Conventions
 
-**Page composition:** `App.jsx` composes fixed sections in order: `Navbar → Hero → About → Services → Partners → CTAStrip → Contact → Footer`. Add new sections here.
-
-**Scroll animations:** `FadeUp.jsx` wraps content with a CSS `fade-up` keyframe triggered by the `useInView` hook (IntersectionObserver). Wrap any new section content in `<FadeUp>` to match the existing animation style.
-
-## Brand & Styling
-
-Custom Tailwind tokens (defined in `tailwind.config.js`):
-- Colors: `navy` / `navy-dark` / `navy-light`, `gold` / `gold-light` / `gold-dark`
-- Font: `font-poppins`
-
-Reusable CSS component classes (defined in `src/index.css`):
-- `.btn-primary` — gold fill, navy text; hover inverts to outline
-- `.btn-outline` — transparent with white border
-- `.btn-navy` — navy fill; hover flips to gold
-- `.section-label` — gold uppercase label with decorative left line
-- `.section-title` — navy extrabold with fluid clamp sizing
-- `.section-sub` — muted slate body text
-
-Prefer these classes over one-off Tailwind utilities to keep the brand consistent.
+- Nav and footer markup are duplicated across all four pages — keep them in sync.
+- Icons are inline SVG with `class="icon"`; do not reintroduce an icon CDN.
+- Prefer the existing component classes (`.btn-primary`, `.eyebrow`,
+  `.section-title`, `.card-item`, …) over one-off styles.
+- Brand colours: navy `#0B2E6D`, navy-dark `#071d45`, gold `#C9A34E`; font Poppins.
