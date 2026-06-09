@@ -38,9 +38,13 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
 .btn-navy { background: var(--navy); color: #fff; }
 .btn-navy:hover { background: var(--navy-dark); }
+.btn-primary:focus-visible, .btn-outline:focus-visible, .btn-navy:focus-visible,
+.nav-hamburger:focus-visible, .nav-links a:focus-visible, .nav-mobile a:focus-visible,
+.social-icon:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
 /* Navbar */
-#navbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 24px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+#navbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 24px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); transition: box-shadow .2s; }
+#navbar.scrolled { box-shadow: 0 2px 14px rgba(7,29,69,.08); }
 .nav-logo .logo-main { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: 3px; line-height: 1; }
 .nav-logo .logo-sub { font-size: 8px; font-weight: 600; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
 .nav-links { display: flex; gap: 28px; list-style: none; }
@@ -126,6 +130,7 @@ img { max-width: 100%; display: block; }
 .form-status { margin-top: 14px; font-size: 14px; font-weight: 500; }
 .form-status.ok { color: #1a7f37; }
 .form-status.err { color: #c0392b; }
+.contact-form .btn-primary { width: 100%; }
 
 /* Footer */
 footer { background: var(--navy-dark); color: #b9c4da; padding: 56px 0 0; }
@@ -155,7 +160,8 @@ footer { background: var(--navy-dark); color: #b9c4da; padding: 56px 0 0; }
   .nav-mobile { display: none; flex-direction: column; gap: 4px; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 12px 24px 20px; }
   #navbar.menu-open .nav-mobile { display: flex; }
   .nav-mobile a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-  .nav-mobile a.btn-navy { text-align: center; border: none; margin-top: 8px; }
+  .nav-mobile a.active { color: var(--navy); font-weight: 700; }
+  .nav-mobile a.btn-navy { text-align: center; border: none; margin-top: 8px; color: #fff; }
   .hero-inner, .about-inner, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .cards-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }

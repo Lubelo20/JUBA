@@ -17,7 +17,11 @@ if (hamburger && navbar) {
 
 // Close mobile menu on any link click inside it
 document.querySelectorAll('.nav-mobile a').forEach(link => {
-  link.addEventListener('click', () => navbar && navbar.classList.remove('menu-open'));
+  link.addEventListener('click', () => {
+    if (!navbar) return;
+    navbar.classList.remove('menu-open');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+  });
 });
 
 // Active nav link — match current filename
