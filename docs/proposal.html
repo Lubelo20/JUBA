@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Juba Consultants — Website Redesign Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2E6D; --navy-dark:#071d45; --gold:#C9A34E; --gold-light:#dbb96a;
+    --ink:#1a2233; --muted:#5b667a; --line:#e4e8ef; --soft:#f6f8fb;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); margin:0; font-size:11pt; line-height:1.6;
+  }
+  /* ---- Cover ---- */
+  .cover{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy-dark) 100%);
+    color:#fff; padding:70px 56px; min-height:100vh; display:flex;
+    flex-direction:column; justify-content:space-between; page-break-after:always;
+  }
+  .cover-logo .main{font-size:34px; font-weight:800; letter-spacing:4px;}
+  .cover-logo .sub{font-size:11px; font-weight:600; letter-spacing:4px; color:var(--gold); text-transform:uppercase;}
+  .cover-mid h1{font-size:40px; line-height:1.12; font-weight:700; margin:0 0 18px; letter-spacing:-.5px;}
+  .cover-mid h1 span{color:var(--gold);}
+  .cover-mid p{font-size:15px; color:#c3cee0; max-width:520px;}
+  .cover-tag{display:inline-block; margin-top:22px; padding:8px 16px; border:1px solid rgba(255,255,255,.25); border-radius:30px; font-size:12px; letter-spacing:1px;}
+  .cover-meta{font-size:12px; color:#aebbd4; line-height:2;}
+  .cover-meta b{color:#fff; font-weight:600;}
+  .status-pill{display:inline-block; background:var(--gold); color:var(--navy-dark); font-weight:700; font-size:11px; letter-spacing:1px; padding:7px 16px; border-radius:30px; text-transform:uppercase;}
+  /* ---- Content ---- */
+  .page{padding:46px 56px;}
+  h2{
+    color:var(--navy); font-size:19pt; font-weight:700; letter-spacing:-.3px;
+    margin:34px 0 6px; padding-bottom:8px; border-bottom:2px solid var(--gold);
+    page-break-after:avoid;
+  }
+  h2 .num{color:var(--gold);}
+  h3{color:var(--navy); font-size:13pt; font-weight:600; margin:22px 0 6px; page-break-after:avoid;}
+  p{margin:8px 0;}
+  .eyebrow{color:var(--gold); font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase;}
+  .lead{color:var(--muted); font-size:11.5pt;}
+  ul{margin:8px 0; padding-left:20px;}
+  li{margin:5px 0;}
+  a{color:var(--navy); text-decoration:none;}
+  strong{color:var(--ink);}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:10pt; page-break-inside:avoid;}
+  th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-weight:600; font-size:9.5pt;}
+  td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:var(--soft);}
+  .callout{
+    background:var(--soft); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:16px 0; font-size:10.5pt; page-break-inside:avoid;
+  }
+  .callout.warn{border-left-color:#c0392b; background:#fdf3f2;}
+  .check li{list-style:none; margin-left:-20px; padding-left:26px; position:relative;}
+  .check li::before{content:"\2610"; position:absolute; left:0; color:var(--gold); font-size:13pt; line-height:1;}
+  .section{page-break-inside:avoid;}
+  .status-line{margin:6px 0 0; font-size:10pt;}
+  @page{margin:14mm 0;}
+  @media print{ .page{padding:0 56px;} }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-logo">
+    <div class="main">JUBA</div>
+    <div class="sub">Consultants</div>
+  </div>
+  <div class="cover-mid">
+    <div class="eyebrow" style="color:var(--gold)">Website Redesign Proposal</div>
+    <h1>A modern home for<br><span>skills, AI &amp; technology.</span></h1>
+    <p>A redesigned, mobile-first website concept for Juba Consultants — preserving everything on the current site and elevating how it looks, performs and converts.</p>
+    <div class="cover-tag">Empowering Through Skills, AI &amp; Technology</div>
+  </div>
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+    <div class="cover-meta">
+      <b>Prepared for:</b> Juba Consultants (Pty) Ltd<br>
+      <b>Prepared by:</b> Lubelo Tech Solutions<br>
+      <b>Date:</b> 15 June 2026
+    </div>
+    <span class="status-pill">Mockup · For Review</span>
+  </div>
+</section>
+
+<div class="page">
+
+<!-- 1 -->
+<section class="section">
+<h2><span class="num">1.</span> Purpose of this document</h2>
+<p>This proposal presents a <strong>redesigned concept</strong> for the Juba Consultants website. It:</p>
+<ul>
+  <li>Captures <strong>everything on the current live site</strong> so nothing is lost in the move.</li>
+  <li>Sets out <strong>what the redesign improves</strong> and why.</li>
+  <li>Makes clear that what you are reviewing is a <strong>working mockup</strong> — a clickable prototype to agree direction and look-and-feel.</li>
+  <li>Lists <strong>what we still need from Juba</strong> (content, brand assets, accounts) to take the approved mockup to a finished, live website.</li>
+</ul>
+<div class="callout"><strong>How to read the mockup:</strong> The prototype is a real, browsable website. Once you are happy with the structure, design and feel, we move into the <strong>final development phase</strong> where placeholder content is replaced with your real company profile, photography, copy and accounts.</div>
+</section>
+
+<!-- 2 -->
+<section class="section">
+<h2><span class="num">2.</span> The current website — captured in full</h2>
+<p class="lead">So nothing is lost, here is everything we recorded from the existing live site (jubaconsultants.co.za). All of this carries forward into the redesign.</p>
+
+<h3>Brand &amp; message</h3>
+<ul>
+  <li><strong>Name:</strong> JUBA CONSULTANTS</li>
+  <li><strong>Tagline:</strong> <em>"Empowering Through Skills, AI &amp; Technology"</em></li>
+  <li><strong>Mission:</strong> Empowering <em>"individuals, communities, and organizations through education, technology, and future-focused digital solutions"</em>, operating across Africa.</li>
+  <li><strong>Values:</strong> Innovation-driven · Community-focused · Education-centered · Future-ready</li>
+</ul>
+
+<h3>Navigation (current)</h3>
+<p>Home · About · Incubation · Skills Development &amp; Training · AI Breakthrough · ICT &amp; Technology Solutions · Contact</p>
+
+<h3>Core service offering (current)</h3>
+<ol>
+  <li><strong>Program Development &amp; Execution</strong> — define objectives and execute customised social-investment initiatives.</li>
+  <li><strong>Impact Assessment &amp; Analysis</strong> — data-driven monitoring, reporting frameworks and strategic communication.</li>
+  <li><strong>Strategic Framework Development</strong> — focused direction with implementation pathways.</li>
+  <li><strong>Action Plan Design</strong> — converting vision into actionable steps, with resource optimisation and defined timelines.</li>
+</ol>
+
+<h3>Three strategic divisions (current)</h3>
+<table>
+  <tr><th>Division</th><th>What it covers</th></tr>
+  <tr><td><strong>Juba Skills Development &amp; Training</strong></td><td>SETA-accredited programmes · learnerships · corporate training · project management</td></tr>
+  <tr><td><strong>AI Breakthrough</strong></td><td>AI education &amp; workshops · intelligent web applications · AI solution development · quantum-computing research</td></tr>
+  <tr><td><strong>ICT &amp; Technology Solutions</strong></td><td>Custom software development · web &amp; mobile applications · digital transformation · technology training</td></tr>
+</table>
+
+<h3>Business Incubation (current)</h3>
+<p>Supports <em>"startups, developing enterprises, and community-based businesses"</em> through enterprise readiness, operational structuring, digital enablement and growth support.</p>
+
+<h3>Contact information (current — needs confirmation, see section 6)</h3>
+<ul>
+  <li><strong>Address:</strong> 27 Magwaza Maphalala St, Greyville, Durban, 4001, KwaZulu-Natal</li>
+  <li><strong>Phone:</strong> 068 382 5733</li>
+  <li><strong>Email:</strong> jubaskillsdev@gmail.com · jubaskillscomm@gmail.com · training.academy@jubaconsultants.co.za · sne.khathi@jubaconsultants.co.za · techdirector@jubaconsultants.co.za</li>
+</ul>
+</section>
+
+<!-- 3 -->
+<section class="section">
+<h2><span class="num">3.</span> What the redesign delivers</h2>
+<p>The redesign keeps <strong>all of the above</strong> but presents it through a modern, professional, fast and mobile-first experience.</p>
+
+<h3>Design direction — "Modern Minimal"</h3>
+<ul>
+  <li>Clean, confident layout with generous spacing and clear hierarchy.</li>
+  <li><strong>Brand palette:</strong> Navy <code>#0B2E6D</code>, Navy-dark <code>#071d45</code>, Gold <code>#C9A34E</code>.</li>
+  <li><strong>Typography:</strong> Poppins — modern, friendly, highly legible.</li>
+  <li>Consistent, reusable component system so every page feels like one product.</li>
+</ul>
+
+<h3>What is already built in the mockup</h3>
+<table>
+  <tr><th>Page</th><th>Contents</th></tr>
+  <tr><td><strong>Home</strong></td><td>Hero → about teaser → services preview → "Who We Serve" → call-to-action</td></tr>
+  <tr><td><strong>About</strong></td><td>Company story, values, founder card</td></tr>
+  <tr><td><strong>Services</strong></td><td>Full services grid</td></tr>
+  <tr><td><strong>Gallery</strong></td><td>Photo grid with click-to-zoom lightbox + video section (with poster frames)</td></tr>
+  <tr><td><strong>Contact</strong></td><td>Contact details + working enquiry form</td></tr>
+</table>
+
+<h3>Improvements over the current site</h3>
+<ul>
+  <li><strong>Modern, cohesive visual identity</strong> — a single design system instead of mixed styles.</li>
+  <li><strong>Mobile-first &amp; fully responsive</strong> — adapts cleanly from desktop → tablet → phone (3 → 2 → 1 column layouts).</li>
+  <li><strong>New media Gallery</strong> — an 8-image grid with an accessible lightbox, plus 8 short videos that load only when played.</li>
+  <li><strong>Performance</strong> — no heavy frameworks; images lazy-load; videos use lightweight poster frames.</li>
+  <li><strong>Accessibility</strong> — keyboard-navigable, visible focus states, descriptive alt text and ARIA labels.</li>
+  <li><strong>Working enquiry form</strong> — submissions handled and validated, ready to wire to Juba's inbox.</li>
+  <li><strong>Maintainable foundation</strong> — clean HTML/CSS/JS that any developer can extend.</li>
+</ul>
+
+<h3>Content from the current site → where it lives in the redesign</h3>
+<table>
+  <tr><th>Current site item</th><th>Proposed home in the redesign</th></tr>
+  <tr><td>Skills Development &amp; Training</td><td>Services / dedicated division page</td></tr>
+  <tr><td>AI Breakthrough</td><td><strong>New</strong> division page <em>(final phase)</em></td></tr>
+  <tr><td>ICT &amp; Technology Solutions</td><td><strong>New</strong> division page <em>(final phase)</em></td></tr>
+  <tr><td>Incubation</td><td><strong>New</strong> dedicated page <em>(final phase)</em></td></tr>
+  <tr><td>4 core services</td><td>Services grid</td></tr>
+  <tr><td>Mission / values</td><td>About page</td></tr>
+  <tr><td>Contact details</td><td>Contact page + footer</td></tr>
+</table>
+<div class="callout"><strong>Note:</strong> The mockup currently emphasises the skills-development side. To match the live site fully, the final build will add <strong>AI Breakthrough</strong>, <strong>ICT &amp; Technology Solutions</strong> and <strong>Incubation</strong> as first-class sections/pages.</div>
+</section>
+
+<!-- 4 -->
+<section class="section">
+<h2><span class="num">4.</span> This is a mockup — what that means</h2>
+<p>The prototype exists to <strong>agree the design and structure before we invest in the final build</strong>. In the mockup:</p>
+<ul>
+  <li>Photos and videos are <strong>placeholders</strong> (taken from recent sessions on a phone).</li>
+  <li>Some copy is <strong>drafted / illustrative</strong>, not final approved wording.</li>
+  <li>Contact details and social links use <strong>placeholder values</strong> pending confirmation.</li>
+  <li>The AI / ICT / Incubation sections are <strong>outlined but not yet built out</strong>.</li>
+</ul>
+<p>None of this is a limitation of the approach — it is the normal prototype stage. Once you approve direction, we replace placeholders with the real thing.</p>
+</section>
+
+<!-- 5 -->
+<section class="section">
+<h2><span class="num">5.</span> From mockup to final — proposed phases</h2>
+<table>
+  <tr><th>Phase</th><th>What happens</th><th>Outcome</th></tr>
+  <tr><td><strong>1. Review (now)</strong></td><td>You explore the mockup and give feedback on look, structure, content</td><td>Agreed direction</td></tr>
+  <tr><td><strong>2. Content &amp; assets</strong></td><td>Juba supplies the materials in section 6; we finalise copy</td><td>Real content ready</td></tr>
+  <tr><td><strong>3. Build-out</strong></td><td>Add AI / ICT / Incubation pages; integrate brand assets, photos, videos</td><td>Complete site</td></tr>
+  <tr><td><strong>4. Polish &amp; launch</strong></td><td>SEO, analytics, legal pages, domain &amp; hosting, testing</td><td>Live website</td></tr>
+  <tr><td><strong>5. Handover &amp; support</strong></td><td>Documentation, training, optional maintenance</td><td>You own and run it</td></tr>
+</table>
+</section>
+
+<!-- 6 -->
+<section class="section">
+<h2><span class="num">6.</span> What we need from Juba to continue</h2>
+<p>To move from mockup to a finished, professional site, please provide the following. This is the single biggest factor in how fast and how well the final site comes together.</p>
+
+<h3>A. Company profile &amp; copy</h3>
+<ul class="check">
+  <li><strong>Official company profile</strong> (PDF/Word) — history, mission, vision, values.</li>
+  <li><strong>Final approved wording</strong> for each service and division.</li>
+  <li><strong>Founder / leadership bios</strong> and roles.</li>
+  <li>Any <strong>accreditations</strong> to display (e.g. SETA, QCTO) with reference numbers.</li>
+</ul>
+
+<h3>B. Brand assets</h3>
+<ul class="check">
+  <li><strong>Logo files</strong> in high resolution — ideally vector (SVG/AI/EPS) plus PNG.</li>
+  <li><strong>Brand guidelines</strong> if they exist (exact colours, fonts, usage rules).</li>
+  <li>Confirmation of the <strong>brand colour palette</strong> (currently navy + gold).</li>
+</ul>
+
+<h3>C. Photography &amp; video</h3>
+<ul class="check">
+  <li><strong>Professional photos</strong> of the team, offices, workshops and events (the mockup uses phone snapshots as placeholders).</li>
+  <li><strong>Team headshots</strong> (consistent style).</li>
+  <li>Any <strong>promotional / training videos</strong> to feature.</li>
+  <li>Permission/consent for any images of identifiable people.</li>
+</ul>
+
+<h3>D. Contact details — please confirm</h3>
+<div class="callout warn">We found <strong>different contact details</strong> between the live site and earlier project files. Please confirm the correct, current details:</div>
+<ul class="check">
+  <li><strong>Phone number(s)</strong> — live site shows <code>068 382 5733</code>; project files show <code>+27 79 351 7376</code>.</li>
+  <li><strong>Physical address</strong> — live site shows <em>27 Magwaza Maphalala St, Greyville</em>; project files show <em>57 Magwaza Maphalala St, Berea</em>.</li>
+  <li><strong>Official email address(es)</strong> — which should be public, and where enquiries should land.</li>
+</ul>
+
+<h3>E. Social media &amp; online presence</h3>
+<ul class="check">
+  <li><strong>Social media handles / links</strong> — LinkedIn, Facebook, Instagram, X, YouTube, etc. (footer icons are currently placeholders).</li>
+  <li><strong>Google Business Profile</strong> link / map location for the contact page.</li>
+  <li>Any <strong>WhatsApp business</strong> number for a quick-contact button.</li>
+</ul>
+
+<h3>F. Accounts &amp; technical</h3>
+<ul class="check">
+  <li><strong>Domain</strong> access (jubaconsultants.co.za) and <strong>hosting</strong> preference.</li>
+  <li><strong>Enquiry-form destination</strong> — email inbox and/or a form service account.</li>
+  <li><strong>Analytics</strong> preference (e.g. Google Analytics) to track visitors.</li>
+  <li>Decision on whether you want a <strong>content editor (CMS)</strong> to update text/news yourself.</li>
+</ul>
+
+<h3>G. Legal &amp; compliance</h3>
+<ul class="check">
+  <li><strong>Privacy Policy</strong> and <strong>Terms</strong> content (or approval for us to draft, incl. POPIA).</li>
+  <li>Cookie/consent requirements if analytics or forms collect data.</li>
+</ul>
+</section>
+
+<!-- 7 -->
+<section class="section">
+<h2><span class="num">7.</span> Optional additions worth considering</h2>
+<p>These are not in the current site but would strengthen the final product:</p>
+<ul>
+  <li><strong>Testimonials / client logos</strong> — social proof from past programmes.</li>
+  <li><strong>News / blog or "Insights"</strong> section — useful for SEO and showing activity.</li>
+  <li><strong>Case studies / impact stories</strong> — concrete outcomes from training &amp; incubation.</li>
+  <li><strong>Newsletter sign-up</strong> — build a contact list.</li>
+  <li><strong>Downloadable resources</strong> — brochures, programme catalogues, application forms.</li>
+</ul>
+</section>
+
+<!-- 8 -->
+<section class="section">
+<h2><span class="num">8.</span> Summary</h2>
+<ul>
+  <li>The redesign <strong>preserves everything</strong> on the current site and presents it in a modern, fast, mobile-friendly, accessible package.</li>
+  <li>What you are reviewing now is a <strong>mockup</strong> — the moment to shape direction.</li>
+  <li>On approval, we proceed to the <strong>final build</strong>: real content, the AI / ICT / Incubation sections, brand assets, photography, and launch.</li>
+  <li>The <strong>fastest path forward</strong> is providing the materials in section 6 — especially the company profile, confirmed contact details, social handles, logo files and professional photos.</li>
+</ul>
+<div class="callout"><strong>Next step:</strong> review the mockup and share feedback, then send through the section 6 checklist so we can begin the final development phase.</div>
+</section>
+
+</div>
+</body>
+</html>
