@@ -44,6 +44,45 @@ const fadeObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
+// Gallery lightbox
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  let lastFocused = null;
+
+  const openLightbox = (src, alt) => {
+    lastFocused = document.activeElement;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  };
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  };
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      openLightbox(item.dataset.src, img ? img.alt : '');
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+}
+
 // Contact enquiry form (progressive enhancement over a Formspree action)
 const form = document.getElementById('enquiry-form');
 if (form) {

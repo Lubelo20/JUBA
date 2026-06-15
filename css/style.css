@@ -149,6 +149,27 @@ footer { background: var(--navy-dark); color: #b9c4da; padding: 56px 0 0; }
 .footer-col a:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 20px 24px; max-width: var(--maxw); margin: 0 auto; display: flex; justify-content: space-between; font-size: 12px; flex-wrap: wrap; gap: 8px; }
 
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.gallery-item { padding: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--soft); cursor: pointer; aspect-ratio: 4 / 3; transition: .2s; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.gallery-item:hover { border-color: var(--gold); }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* Video grid */
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.video-item { margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--navy-dark); }
+.video-item video { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block; background: var(--navy-dark); }
+
+/* Lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(7,29,69,.92); }
+.lightbox[hidden] { display: none; }
+.lightbox-img { max-width: min(1000px, 92vw); max-height: 86vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.lightbox-close { position: absolute; top: 20px; right: 24px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.12); color: #fff; transition: .2s; }
+.lightbox-close:hover { background: var(--gold); color: var(--navy-dark); }
+.lightbox-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 /* Fade-up animation */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .fade-up.visible { opacity: 1; transform: none; }
@@ -164,9 +185,10 @@ footer { background: var(--navy-dark); color: #b9c4da; padding: 56px 0 0; }
   .nav-mobile a.btn-navy { text-align: center; border: none; margin-top: 8px; color: #fff; }
   .hero-inner, .about-inner, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .cards-grid { grid-template-columns: 1fr; }
+  .gallery-grid, .video-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 520px) {
-  .values-grid, .footer-inner { grid-template-columns: 1fr; }
+  .values-grid, .footer-inner, .gallery-grid, .video-grid { grid-template-columns: 1fr; }
   .trust-badges { flex-direction: column; }
 }
