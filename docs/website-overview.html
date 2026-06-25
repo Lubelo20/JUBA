@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Juba Consultants — Website Overview &amp; Improvements</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2E6D; --navy-dark:#071d45; --gold:#C9A34E; --gold-light:#dbb96a;
+    --ink:#1a2233; --muted:#5b667a; --line:#e4e8ef; --soft:#f6f8fb;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); margin:0; font-size:11pt; line-height:1.6;
+  }
+  /* Cover */
+  .cover{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy-dark) 100%);
+    color:#fff; padding:70px 56px; min-height:100vh; display:flex;
+    flex-direction:column; justify-content:space-between; page-break-after:always;
+  }
+  .cover-logo .main{font-size:34px; font-weight:800; letter-spacing:4px;}
+  .cover-logo .sub{font-size:11px; font-weight:600; letter-spacing:4px; color:var(--gold); text-transform:uppercase;}
+  .cover-mid h1{font-size:40px; line-height:1.12; font-weight:700; margin:0 0 18px; letter-spacing:-.5px;}
+  .cover-mid h1 span{color:var(--gold);}
+  .cover-mid p{font-size:15px; color:#c3cee0; max-width:540px;}
+  .cover-tag{display:inline-block; margin-top:22px; padding:8px 16px; border:1px solid rgba(255,255,255,.25); border-radius:30px; font-size:12px; letter-spacing:1px;}
+  .cover-meta{font-size:12px; color:#aebbd4; line-height:2;}
+  .cover-meta b{color:#fff; font-weight:600;}
+  .status-pill{display:inline-block; background:var(--gold); color:var(--navy-dark); font-weight:700; font-size:11px; letter-spacing:1px; padding:7px 16px; border-radius:30px; text-transform:uppercase;}
+  /* Content */
+  .page{padding:46px 56px;}
+  h2{
+    color:var(--navy); font-size:19pt; font-weight:700; letter-spacing:-.3px;
+    margin:34px 0 6px; padding-bottom:8px; border-bottom:2px solid var(--gold);
+    page-break-after:avoid;
+  }
+  h2 .num{color:var(--gold);}
+  h3{color:var(--navy); font-size:13pt; font-weight:600; margin:20px 0 4px; page-break-after:avoid;}
+  p{margin:8px 0;}
+  .eyebrow{color:var(--gold); font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase;}
+  .lead{color:var(--muted); font-size:11.5pt;}
+  ul,ol{margin:8px 0; padding-left:20px;}
+  li{margin:5px 0;}
+  a{color:var(--navy); text-decoration:none;}
+  strong{color:var(--ink);}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:10pt; page-break-inside:avoid;}
+  th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-weight:600; font-size:9.5pt;}
+  td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:var(--soft);}
+  .callout{
+    background:var(--soft); border-left:4px solid var(--gold); border-radius:6px;
+    padding:14px 18px; margin:16px 0; font-size:10.5pt; page-break-inside:avoid;
+  }
+  .callout.warn{border-left-color:#c0392b; background:#fdf3f2;}
+  .section{page-break-inside:avoid;}
+  @page{margin:14mm 0;}
+  @media print{ .page{padding:0 56px;} }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-logo">
+    <div class="main">JUBA</div>
+    <div class="sub">Consultants</div>
+  </div>
+  <div class="cover-mid">
+    <div class="eyebrow">Website Overview &amp; Improvements</div>
+    <h1>What's on the site,<br><span>and what we improved.</span></h1>
+    <p>A summary of the refreshed Juba Consultants website — its pages and content, the design system, the media, and everything improved in this round of work. Now live on GitHub Pages.</p>
+    <div class="cover-tag">Driving Innovation. Building Capacity. Transforming Futures.</div>
+  </div>
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+    <div class="cover-meta">
+      <b>Prepared for:</b> Juba Consultants (Pty) Ltd<br>
+      <b>Prepared by:</b> Lubelo Tech Solutions<br>
+      <b>Date:</b> 26 June 2026
+    </div>
+    <span class="status-pill">Live · Deployed</span>
+  </div>
+</section>
+
+<div class="page">
+
+<!-- 1 -->
+<section class="section">
+<h2><span class="num">1.</span> At a glance</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th></tr>
+  <tr><td><strong>Live site</strong></td><td>https://lubelo20.github.io/JUBA/</td></tr>
+  <tr><td><strong>Repository</strong></td><td>github.com/Lubelo20/JUBA (branch <strong>main</strong>)</td></tr>
+  <tr><td><strong>Stack</strong></td><td>Static HTML + CSS + vanilla JavaScript — no framework, no build step</td></tr>
+  <tr><td><strong>Deploy</strong></td><td>GitHub Pages (source <strong>main</strong> / root) — every push to main auto-deploys</td></tr>
+  <tr><td><strong>Brand</strong></td><td>Navy #0B2E6D · Navy-dark #071d45 · Gold #C9A34E · Poppins</td></tr>
+  <tr><td><strong>Positioning</strong></td><td>Skills Development · AI · ICT — "Driving innovation. Building capacity. Transforming futures."</td></tr>
+</table>
+<div class="callout warn"><strong>Note:</strong> the public domain <strong>jubaconsultants.co.za</strong> is a separate, older build and is <strong>not</strong> served from this repository. Pointing it at this new site needs a custom-domain + DNS step (see section 7).</div>
+</section>
+
+<!-- 2 -->
+<section class="section">
+<h2><span class="num">2.</span> Site map — what's on each page</h2>
+<p class="lead">Navigation: Home · About · Services ▾ (Skills / AI / ICT) · Incubation · Gallery · Contact</p>
+
+<h3>Home</h3>
+<ul>
+  <li>Hero with a <strong>mock JUBA LMS dashboard</strong> (learner view: progress ring, KPI cards, course list, upcoming session) — pure CSS/SVG, labelled as a preview.</li>
+  <li>About teaser, services preview (cards link to the three divisions), Who We Serve, mission strip, a "Life at Juba" photo band, and a closing call-to-action.</li>
+</ul>
+
+<h3>About</h3>
+<ul>
+  <li>Intro + founder card (Sinenhlanhla Khathi) + trust badges.</li>
+  <li>Core values band (7 values) on a navy-overlaid <strong>photo background</strong>.</li>
+  <li>Vision &amp; Mission cards, a 5-step "Our Approach", Areas of Operation (7 provinces), and the team.</li>
+</ul>
+
+<h3>Services hub</h3>
+<ul>
+  <li>The three divisions as image cards, plus secondary offerings: Business Incubation, Organisational Capacity Building, Bursary Facilitation.</li>
+</ul>
+
+<h3>Division pages</h3>
+<ul>
+  <li><strong>Skills Development &amp; Training</strong> — learnerships, skills programmes, short courses, corporate training, SDF consultancy; trading as KZN Project Management; SETA &amp; QCTO aligned.</li>
+  <li><strong>AI Breakthrough</strong> — AI education, solution creation, tool application, community deployment, emerging tech.</li>
+  <li><strong>ICT &amp; Technology Solutions</strong> — development services + training tiers (ages 8–16 to enterprise) + Notable Projects (Corundum, Project LMS, Mentor Management System, JubaSkillsDevelopment Platform).</li>
+</ul>
+
+<h3>Incubation</h3>
+<ul><li>Startup readiness, business-model refinement, compliance support, digital enablement, operational structuring, growth mentoring.</li></ul>
+
+<h3>Gallery</h3>
+<ul><li>Masonry photo grid (15 curated photos, lightbox) + a video section (5 short clips).</li></ul>
+
+<h3>Contact</h3>
+<ul><li>Address, phone, director, departmental emails (general, training academy, director, technical director), WhatsApp button, and an enquiry form.</li></ul>
+</section>
+
+<!-- 3 -->
+<section class="section">
+<h2><span class="num">3.</span> Design system</h2>
+<ul>
+  <li><strong>Warmer, more human feel:</strong> softer rounded cards, gentle shadows, warm-tinted sections, real photo bands woven in.</li>
+  <li><strong>Reusable components:</strong> dropdown nav, gradient banner heroes, feature lists, offer cards, hub cards, project cards, mission strips, photo splits/strips, the LMS dashboard mock, email cards, WhatsApp button.</li>
+  <li><strong>Accessibility:</strong> inline SVG icons (no icon CDN), focus-visible states, ARIA labels, scroll-reveal that respects reduced-motion.</li>
+  <li><strong>Responsive</strong> across desktop, tablet and mobile.</li>
+</ul>
+</section>
+
+<!-- 4 -->
+<section class="section">
+<h2><span class="num">4.</span> Media</h2>
+<ul>
+  <li>Event photos and videos were <strong>curated, optimised and renamed</strong> descriptively and live in <code>images/gallery/</code>.</li>
+  <li>Loose source files were <strong>archived locally</strong> to <code>images/originals/</code> (git-ignored — kept on disk, not in the repo).</li>
+  <li>Gallery videos were <strong>compressed</strong> for the web; the 9-minute session recording was <strong>trimmed to a 25-second highlight</strong> (31 MB → ~4 MB).</li>
+</ul>
+</section>
+
+<!-- 5 -->
+<section class="section">
+<h2><span class="num">5.</span> What we improved</h2>
+<ol>
+  <li><strong>Content migration</strong> — brought the richer live-site content into the multi-page design with all specifics (programmes, trading name, projects).</li>
+  <li><strong>New pages &amp; navigation</strong> — added Skills, AI and ICT division pages and a dedicated Incubation page; turned Services into a hub with a dropdown nav.</li>
+  <li><strong>Warmer, more human design</strong> — rounded cards, soft shadows, photo bands, mission strips.</li>
+  <li><strong>Home LMS dashboard mockup</strong> — replaced the static "Core Expertise" panel with a product-style JUBA LMS preview.</li>
+  <li><strong>About page rebuilt</strong> from the company profile (vision/mission, 7 values, approach, areas of operation, team) and re-balanced the intro layout.</li>
+  <li><strong>Core-values band</strong> given a navy-overlaid photo background.</li>
+  <li><strong>Contact</strong> — added departmental emails + WhatsApp; fixed a stale fallback email in the JavaScript.</li>
+  <li><strong>Gallery</strong> — switched to a masonry layout so portrait photos display fully; refreshed photos and videos.</li>
+  <li><strong>Media housekeeping</strong> — curated, optimised, renamed, archived originals, compressed videos, trimmed the long clip to a highlight.</li>
+  <li><strong>Copy</strong> — replaced "Black female owned" with "Proudly South African".</li>
+  <li><strong>Shipped</strong> — committed and pushed to main; deployed to GitHub Pages and verified live.</li>
+</ol>
+</section>
+
+<!-- 6 -->
+<section class="section">
+<h2><span class="num">6.</span> Tech &amp; deployment</h2>
+<ul>
+  <li><strong>No build step / no dependencies.</strong> Preview locally with <code>python3 -m http.server 8000</code>.</li>
+  <li>Nav and footer markup are duplicated across pages — keep them in sync when editing.</li>
+  <li>GitHub Pages serves from <strong>main</strong> / root; pushing to main redeploys automatically (~1 minute).</li>
+</ul>
+</section>
+
+<!-- 7 -->
+<section class="section">
+<h2><span class="num">7.</span> Suggested next steps</h2>
+<ul>
+  <li><strong>Custom domain:</strong> point jubaconsultants.co.za (or a subdomain) at GitHub Pages — add the domain in Settings → Pages, add a CNAME file, and create the DNS records.</li>
+  <li><strong>Contact form:</strong> set the real Formspree endpoint in <code>contact.html</code> (currently a placeholder) so enquiries are delivered.</li>
+  <li><strong>Social links:</strong> the footer LinkedIn / Facebook / X icons point to "#" — add the real profile URLs.</li>
+  <li><strong>LMS link:</strong> when the real JUBA LMS is online, link the hero mock and the ICT "Access LMS Portal" CTA to it.</li>
+</ul>
+</section>
+
+</div>
+</body>
+</html>
