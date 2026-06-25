@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lubelo20.github.io/JUBA/sitemap.xml
