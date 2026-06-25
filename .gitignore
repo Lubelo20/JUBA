@@ -23,3 +23,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local source/working material — kept on disk, not part of the static site
+images/originals/
+
+# Source documents (not website assets)
+/*.docx
+/*.pdf

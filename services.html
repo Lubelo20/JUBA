@@ -18,7 +18,15 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li class="has-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="dropdown">
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="incubation.html">Incubation</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -30,6 +38,10 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
+    <a href="skills.html" class="nav-mobile-sub">Skills Development &amp; Training</a>
+    <a href="ai.html" class="nav-mobile-sub">AI Breakthrough</a>
+    <a href="ict.html" class="nav-mobile-sub">ICT &amp; Technology Solutions</a>
+    <a href="incubation.html">Incubation</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-navy">Get in touch</a>
@@ -45,19 +57,53 @@
     </div>
   </div>
 
-  <!-- SERVICES GRID -->
+  <!-- DIVISIONS HUB -->
   <section class="section">
     <div class="container">
       <div class="fade-up">
-        <span class="eyebrow">Full Service Range</span>
+        <span class="eyebrow">Three divisions</span>
         <h2 class="section-title">Integrated solutions across skills, AI, and technology.</h2>
-        <p class="section-sub">From accredited training and AI innovation to software development, incubation, and bursary management — we cover the full lifecycle.</p>
+        <p class="section-sub">From accredited training and AI innovation to software development, incubation, and bursary management — we cover the full lifecycle. Explore each division below.</p>
+      </div>
+      <div class="hub-grid">
+        <a href="skills.html" class="hub-card fade-up">
+          <div class="hub-media"><img src="images/gallery/training-session.jpg" alt="Learners in a Juba accredited training session" loading="lazy"></div>
+          <div class="hub-body">
+            <h3>Skills Development &amp; Training</h3>
+            <p>SETA-aligned, accredited training — learnerships, skills programmes, corporate training and SDF consultancy, in full QCTO compliance.</p>
+            <span class="hub-link">Explore division &rarr;</span>
+          </div>
+        </a>
+        <a href="ai.html" class="hub-card fade-up" style="transition-delay:.06s">
+          <div class="hub-media"><img src="images/gallery/keynote-presentation.jpg" alt="A presenter at a Juba AI Breakthrough session" loading="lazy"></div>
+          <div class="hub-body">
+            <h3>AI Breakthrough</h3>
+            <p>Making AI accessible to all — education, hands-on tool training, solution creation and responsible community deployment.</p>
+            <span class="hub-link">Explore division &rarr;</span>
+          </div>
+        </a>
+        <a href="ict.html" class="hub-card fade-up" style="transition-delay:.12s">
+          <div class="hub-media"><img src="images/gallery/practical-training.jpg" alt="Juba hands-on technology training" loading="lazy"></div>
+          <div class="hub-body">
+            <h3>ICT &amp; Technology Solutions</h3>
+            <p>Custom software, web &amp; mobile apps, AI integration and cloud — plus a full ladder of technology training, ages 8 to enterprise.</p>
+            <span class="hub-link">Explore division &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE SERVICES -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="fade-up">
+        <span class="eyebrow">More ways we help</span>
+        <h2 class="section-title">Beyond the three divisions.</h2>
+        <p class="section-sub">Incubation, capacity building and bursary management round out our full-lifecycle support.</p>
       </div>
       <div class="cards-grid">
-        <div class="card-item fade-up"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3 class="card-name">Skills Development &amp; Training</h3><p class="card-desc">SETA-aligned, accredited training: learnerships, skills programmes, corporate training, and workplace skills development in full compliance with SETA and QCTO standards.</p></div>
-        <div class="card-item fade-up" style="transition-delay:.05s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M9 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></div><h3 class="card-name">AI Breakthrough</h3><p class="card-desc">Demystifying and applying AI: workshops, intelligent web applications, AI solution development, and community-based AI initiatives across all age groups.</p></div>
-        <div class="card-item fade-up" style="transition-delay:.1s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 21h14"/><path d="m6 8 -3 6h6Z"/><path d="m18 8 -3 6h6Z"/><path d="M5 8h14"/></svg></div><h3 class="card-name">ICT &amp; Technology Solutions</h3><p class="card-desc">End-to-end digital transformation: custom software, website and mobile application development, system maintenance and support, and technology training.</p></div>
-        <div class="card-item fade-up"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></div><h3 class="card-name">Business Incubation</h3><p class="card-desc">Helping startups and emerging enterprises move from idea stage to sustainable, investable businesses — model development, structuring, compliance, and growth support.</p></div>
+        <a href="incubation.html" class="card-item fade-up" style="display:block;color:inherit"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></div><h3 class="card-name">Business Incubation</h3><p class="card-desc">Helping startups and emerging enterprises move from idea stage to sustainable, investable businesses — model development, structuring, compliance, and growth support.</p><span class="hub-link" style="margin-top:14px">Visit incubation &rarr;</span></a>
         <div class="card-item fade-up" style="transition-delay:.05s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3 class="card-name">Organisational Capacity Building</h3><p class="card-desc">Strengthening organisations through strategic planning, performance improvement, skills audits, workforce analysis, and effectiveness solutions.</p></div>
         <div class="card-item fade-up" style="transition-delay:.1s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg></div><h3 class="card-name">Bursary Facilitation</h3><p class="card-desc">End-to-end bursary programme management: design, learner selection and placement, monitoring, stakeholder coordination, and governance.</p></div>
       </div>
@@ -92,10 +138,10 @@
     <div class="footer-col">
       <p class="footer-col-title">Services</p>
       <ul>
-        <li><a href="services.html">Skills Development &amp; Training</a></li>
-        <li><a href="services.html">AI Breakthrough</a></li>
-        <li><a href="services.html">ICT &amp; Technology</a></li>
-        <li><a href="services.html">Business Incubation</a></li>
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology</a></li>
+        <li><a href="incubation.html">Business Incubation</a></li>
         <li><a href="services.html">Capacity Building</a></li>
         <li><a href="services.html">Bursary Facilitation</a></li>
       </ul>
@@ -105,6 +151,7 @@
       <ul>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="incubation.html">Incubation</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

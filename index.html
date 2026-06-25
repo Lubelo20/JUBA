@@ -19,7 +19,15 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li class="has-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="dropdown">
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="incubation.html">Incubation</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -31,6 +39,10 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
+    <a href="skills.html" class="nav-mobile-sub">Skills Development &amp; Training</a>
+    <a href="ai.html" class="nav-mobile-sub">AI Breakthrough</a>
+    <a href="ict.html" class="nav-mobile-sub">ICT &amp; Technology Solutions</a>
+    <a href="incubation.html">Incubation</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-navy">Get in touch</a>
@@ -50,21 +62,54 @@
           <a href="contact.html" class="btn-outline">Contact Us</a>
         </div>
       </div>
-      <div class="hero-panel fade-up" style="transition-delay:.12s">
-        <p class="hero-panel-title">Core Expertise</p>
-        <div class="hero-chips">
-          <span class="hero-chip">Skills Development</span>
-          <span class="hero-chip">AI Innovation</span>
-          <span class="hero-chip">ICT Solutions</span>
-          <span class="hero-chip">Business Incubation</span>
-          <span class="hero-chip">Capacity Building</span>
-          <span class="hero-chip">Bursary Facilitation</span>
+      <div class="lms-wrap fade-up" style="transition-delay:.12s">
+        <div class="lms-mock" role="img" aria-label="Preview of the JUBA LMS learner dashboard showing course progress and an upcoming session">
+          <div class="lms-bar">
+            <div class="lms-bar-brand"><span class="lms-logo">J</span>JUBA <em>LMS</em></div>
+            <div class="lms-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="lms-body">
+            <div class="lms-welcome">
+              <div>
+                <p class="lms-hi">Welcome back, Thabo</p>
+                <p class="lms-sub">Business Administration · NQF Level 4</p>
+              </div>
+              <span class="lms-avatar">T</span>
+            </div>
+            <div class="lms-overview">
+              <div class="lms-ring">
+                <svg viewBox="0 0 36 36" aria-hidden="true">
+                  <circle class="lms-ring-bg" cx="18" cy="18" r="15.9"></circle>
+                  <circle class="lms-ring-fg" cx="18" cy="18" r="15.9"></circle>
+                </svg>
+                <span class="lms-ring-num">72%</span>
+              </div>
+              <div class="lms-kpis">
+                <div class="lms-kpi"><span class="lms-kpi-num">4</span><span class="lms-kpi-label">Courses</span></div>
+                <div class="lms-kpi"><span class="lms-kpi-num">2</span><span class="lms-kpi-label">Certificates</span></div>
+                <div class="lms-kpi"><span class="lms-kpi-num">48</span><span class="lms-kpi-label">Hours</span></div>
+              </div>
+            </div>
+            <p class="lms-section-label">My courses</p>
+            <div class="lms-course">
+              <div class="lms-course-top"><span>Business Administration</span><span class="lms-pct">72%</span></div>
+              <div class="lms-track"><span style="width:72%"></span></div>
+            </div>
+            <div class="lms-course">
+              <div class="lms-course-top"><span>End User Computing</span><span class="lms-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Completed</span></div>
+              <div class="lms-track"><span style="width:100%"></span></div>
+            </div>
+            <div class="lms-course">
+              <div class="lms-course-top"><span>Project Management</span><span class="lms-pct">45%</span></div>
+              <div class="lms-track"><span style="width:45%"></span></div>
+            </div>
+            <div class="lms-next">
+              <span class="lms-next-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <div><p class="lms-next-title">Next: Facilitated session</p><p class="lms-next-time">Monday · 09:00</p></div>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat"><span class="hero-stat-num">Gov</span><span class="hero-stat-label">Institutions</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">SME</span><span class="hero-stat-label">Enterprises</span></div>
-          <div class="hero-stat"><span class="hero-stat-num">Int'l</span><span class="hero-stat-label">Standards</span></div>
-        </div>
+        <p class="lms-caption"><span class="lms-live-dot"></span> JUBA LMS &middot; learner dashboard preview</p>
       </div>
     </div>
   </section>
@@ -98,9 +143,9 @@
         <a href="services.html" class="btn-navy">View all services &rarr;</a>
       </div>
       <div class="cards-grid">
-        <div class="card-item fade-up"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3 class="card-name">Skills Development &amp; Training</h3><p class="card-desc">SETA-aligned, accredited training — learnerships, skills programmes, and workplace development in full compliance with SETA and QCTO standards.</p></div>
-        <div class="card-item fade-up" style="transition-delay:.06s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M9 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></div><h3 class="card-name">AI Breakthrough</h3><p class="card-desc">Demystifying and applying AI — workshops, intelligent web applications, and community-based AI initiatives across all age groups.</p></div>
-        <div class="card-item fade-up" style="transition-delay:.12s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 21h14"/><path d="m6 8 -3 6h6Z"/><path d="m18 8 -3 6h6Z"/><path d="M5 8h14"/></svg></div><h3 class="card-name">ICT &amp; Technology Solutions</h3><p class="card-desc">End-to-end digital transformation — custom software, website and mobile app development, system support, and technology training.</p></div>
+        <a href="skills.html" class="card-item fade-up" style="display:block;color:inherit"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3 class="card-name">Skills Development &amp; Training</h3><p class="card-desc">SETA-aligned, accredited training — learnerships, skills programmes, and workplace development in full compliance with SETA and QCTO standards.</p><span class="hub-link" style="margin-top:14px">Explore &rarr;</span></a>
+        <a href="ai.html" class="card-item fade-up" style="display:block;color:inherit;transition-delay:.06s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M9 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3"/><path d="m9 14 2 2 4-4"/></svg></div><h3 class="card-name">AI Breakthrough</h3><p class="card-desc">Demystifying and applying AI — workshops, intelligent web applications, and community-based AI initiatives across all age groups.</p><span class="hub-link" style="margin-top:14px">Explore &rarr;</span></a>
+        <a href="ict.html" class="card-item fade-up" style="display:block;color:inherit;transition-delay:.12s"><div class="card-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 21h14"/><path d="m6 8 -3 6h6Z"/><path d="m18 8 -3 6h6Z"/><path d="M5 8h14"/></svg></div><h3 class="card-name">ICT &amp; Technology Solutions</h3><p class="card-desc">End-to-end digital transformation — custom software, website and mobile app development, system support, and technology training.</p><span class="hub-link" style="margin-top:14px">Explore &rarr;</span></a>
       </div>
     </div>
   </section>
@@ -117,6 +162,33 @@
         <div class="serve-card fade-up"><div class="serve-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 3 8h18Z"/></svg></div><h3 class="serve-title">Government</h3><p class="serve-desc">We help government departments meet their skills development and transformation mandates — on time, correctly documented, and ready for audit.</p></div>
         <div class="serve-card fade-up" style="transition-delay:.1s"><div class="serve-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="1"/><path d="M9 6h0M15 6h0M9 10h0M15 10h0M9 14h0M15 14h0"/><path d="M10 22v-4h4v4"/></svg></div><h3 class="serve-title">Private Sector</h3><p class="serve-desc">From large corporates to growing SMEs, we handle the compliance work so your HR team can focus on your people.</p></div>
         <div class="serve-card fade-up" style="transition-delay:.2s"><div class="serve-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg></div><h3 class="serve-title">International</h3><p class="serve-desc">Benchmarked against international HR standards while staying grounded in South African legislation and SETA requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION STRIP -->
+  <section class="mission-strip">
+    <div class="container">
+      <span class="eyebrow">Our mission</span>
+      <p>Empowering individuals, communities, and organizations through education, technology, and <span>future-focused digital solutions</span> &mdash; rooted and growing across Africa.</p>
+    </div>
+  </section>
+
+  <!-- LIFE AT JUBA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div>
+          <span class="eyebrow">Life at Juba</span>
+          <h2 class="section-title">Our work, our people</h2>
+        </div>
+        <a href="gallery.html" class="btn-navy">View gallery &rarr;</a>
+      </div>
+      <div class="photo-strip">
+        <figure class="fade-up"><img src="images/gallery/training-session.jpg" alt="Learners in a Juba Consultants training session" loading="lazy"></figure>
+        <figure class="fade-up"><img src="images/gallery/podium-address.jpg" alt="Keynote address at a Juba programme" loading="lazy"></figure>
+        <figure class="fade-up"><img src="images/gallery/learners-group.jpg" alt="Juba Consultants learners group" loading="lazy"></figure>
+        <figure class="fade-up"><img src="images/gallery/community-celebration.jpg" alt="A Juba community celebration" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -149,10 +221,10 @@
     <div class="footer-col">
       <p class="footer-col-title">Services</p>
       <ul>
-        <li><a href="services.html">Skills Development &amp; Training</a></li>
-        <li><a href="services.html">AI Breakthrough</a></li>
-        <li><a href="services.html">ICT &amp; Technology</a></li>
-        <li><a href="services.html">Business Incubation</a></li>
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology</a></li>
+        <li><a href="incubation.html">Business Incubation</a></li>
         <li><a href="services.html">Capacity Building</a></li>
         <li><a href="services.html">Bursary Facilitation</a></li>
       </ul>
@@ -162,6 +234,7 @@
       <ul>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="incubation.html">Incubation</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

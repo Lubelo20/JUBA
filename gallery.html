@@ -18,7 +18,15 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li class="has-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="dropdown">
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="incubation.html">Incubation</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -30,6 +38,10 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
+    <a href="skills.html" class="nav-mobile-sub">Skills Development &amp; Training</a>
+    <a href="ai.html" class="nav-mobile-sub">AI Breakthrough</a>
+    <a href="ict.html" class="nav-mobile-sub">ICT &amp; Technology Solutions</a>
+    <a href="incubation.html">Incubation</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-navy">Get in touch</a>
@@ -54,29 +66,50 @@
         <p class="section-sub">From workshops and training sessions to graduation gatherings &mdash; a look at the people and programmes behind our work.</p>
       </div>
       <div class="gallery-grid">
-        <button class="gallery-item fade-up" data-src="images/gallery/gallery-01.jpg" aria-label="Open image: facilitator presenting at a training session">
-          <img src="images/gallery/gallery-01.jpg" alt="Facilitator presenting at a Juba training session" loading="lazy">
+        <button class="gallery-item fade-up" data-src="images/gallery/training-session.jpg" aria-label="Open image: learners in a training session">
+          <img src="images/gallery/training-session.jpg" alt="Learners in a Juba training session" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/gallery-02.jpg" aria-label="Open image: delegates seated at an outdoor workshop">
-          <img src="images/gallery/gallery-02.jpg" alt="Delegates seated at an outdoor Juba workshop" loading="lazy">
+        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/conference-audience.jpg" aria-label="Open image: delegates at a Juba programme">
+          <img src="images/gallery/conference-audience.jpg" alt="Delegates at a Juba programme" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/gallery-03.jpg" aria-label="Open image: facilitator addressing a group of learners">
-          <img src="images/gallery/gallery-03.jpg" alt="Facilitator addressing a group of learners" loading="lazy">
+        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/keynote-presentation.jpg" aria-label="Open image: a presenter delivering a keynote">
+          <img src="images/gallery/keynote-presentation.jpg" alt="A presenter delivering a keynote" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" data-src="images/gallery/gallery-04.jpg" aria-label="Open image: learners attending an indoor session">
-          <img src="images/gallery/gallery-04.jpg" alt="Learners attending an indoor Juba session" loading="lazy">
+        <button class="gallery-item fade-up" data-src="images/gallery/podium-address.jpg" aria-label="Open image: addressing the audience from the podium">
+          <img src="images/gallery/podium-address.jpg" alt="Addressing the audience from the podium" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/gallery-05.jpg" aria-label="Open image: a full workshop audience with facilitators">
-          <img src="images/gallery/gallery-05.jpg" alt="A full workshop audience with facilitators" loading="lazy">
+        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/programme-launch.jpg" aria-label="Open image: a Juba programme launch">
+          <img src="images/gallery/programme-launch.jpg" alt="A Juba programme launch" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/gallery-06.jpg" aria-label="Open image: group photo of programme participants">
-          <img src="images/gallery/gallery-06.jpg" alt="Group photo of Juba programme participants" loading="lazy">
+        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/awards-ceremony.jpg" aria-label="Open image: recognising programme achievements">
+          <img src="images/gallery/awards-ceremony.jpg" alt="Recognising programme achievements" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" data-src="images/gallery/gallery-07.jpg" aria-label="Open image: programme participants gathered together">
-          <img src="images/gallery/gallery-07.jpg" alt="Juba programme participants gathered together" loading="lazy">
+        <button class="gallery-item fade-up" data-src="images/gallery/group-backdrop.jpg" aria-label="Open image: participants at the programme backdrop">
+          <img src="images/gallery/group-backdrop.jpg" alt="Participants at the programme backdrop" loading="lazy">
         </button>
-        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/gallery-08.jpg" aria-label="Open image: cohort group photo">
-          <img src="images/gallery/gallery-08.jpg" alt="Juba cohort group photo" loading="lazy">
+        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/team-event.jpg" aria-label="Open image: the Juba team at a community event">
+          <img src="images/gallery/team-event.jpg" alt="The Juba team at a community event" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/stakeholders.jpg" aria-label="Open image: stakeholders at a Juba showcase">
+          <img src="images/gallery/stakeholders.jpg" alt="Stakeholders at a Juba showcase" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" data-src="images/gallery/community-celebration.jpg" aria-label="Open image: a community celebration">
+          <img src="images/gallery/community-celebration.jpg" alt="A Juba community celebration" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/practical-training.jpg" aria-label="Open image: hands-on practical training">
+          <img src="images/gallery/practical-training.jpg" alt="Hands-on practical training" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/learners-group.jpg" aria-label="Open image: group photo of programme participants">
+          <img src="images/gallery/learners-group.jpg" alt="Group photo of Juba programme participants" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" data-src="images/gallery/spokesperson-01.jpg" aria-label="Open image: a Juba programme spokesperson">
+          <img src="images/gallery/spokesperson-01.jpg" alt="A Juba programme spokesperson" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" style="transition-delay:.05s" data-src="images/gallery/spokesperson-02.jpg" aria-label="Open image: a Juba programme spokesperson">
+          <img src="images/gallery/spokesperson-02.jpg" alt="A Juba programme spokesperson" loading="lazy">
+        </button>
+        <button class="gallery-item fade-up" style="transition-delay:.1s" data-src="images/gallery/spokesperson-03.jpg" aria-label="Open image: a Juba programme spokesperson">
+          <img src="images/gallery/spokesperson-03.jpg" alt="A Juba programme spokesperson" loading="lazy">
         </button>
       </div>
     </div>
@@ -91,14 +124,11 @@
         <p class="section-sub">Short clips from our workshops and training sessions. Tap a video to play.</p>
       </div>
       <div class="video-grid">
-        <figure class="video-item fade-up"><video controls preload="none" playsinline poster="images/gallery/video-01.jpg"><source src="images/gallery/video-01.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up" style="transition-delay:.05s"><video controls preload="none" playsinline poster="images/gallery/video-02.jpg"><source src="images/gallery/video-02.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up" style="transition-delay:.1s"><video controls preload="none" playsinline poster="images/gallery/video-03.jpg"><source src="images/gallery/video-03.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up"><video controls preload="none" playsinline poster="images/gallery/video-04.jpg"><source src="images/gallery/video-04.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up" style="transition-delay:.05s"><video controls preload="none" playsinline poster="images/gallery/video-05.jpg"><source src="images/gallery/video-05.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up" style="transition-delay:.1s"><video controls preload="none" playsinline poster="images/gallery/video-06.jpg"><source src="images/gallery/video-06.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up"><video controls preload="none" playsinline poster="images/gallery/video-07.jpg"><source src="images/gallery/video-07.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
-        <figure class="video-item fade-up" style="transition-delay:.05s"><video controls preload="none" playsinline poster="images/gallery/video-08.jpg"><source src="images/gallery/video-08.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
+        <figure class="video-item fade-up"><video controls preload="none" playsinline poster="images/gallery/video-training-01.jpg"><source src="images/gallery/video-training-01.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
+        <figure class="video-item fade-up" style="transition-delay:.05s"><video controls preload="none" playsinline poster="images/gallery/video-training-02.jpg"><source src="images/gallery/video-training-02.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
+        <figure class="video-item fade-up" style="transition-delay:.1s"><video controls preload="none" playsinline poster="images/gallery/video-session-01.jpg"><source src="images/gallery/video-session-01.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
+        <figure class="video-item fade-up"><video controls preload="none" playsinline poster="images/gallery/video-spokesperson-01.jpg"><source src="images/gallery/video-spokesperson-01.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
+        <figure class="video-item fade-up" style="transition-delay:.05s"><video controls preload="none" playsinline poster="images/gallery/video-spokesperson-02.jpg"><source src="images/gallery/video-spokesperson-02.mp4" type="video/mp4">Your browser does not support the video tag.</video></figure>
       </div>
     </div>
   </section>
@@ -139,10 +169,10 @@
     <div class="footer-col">
       <p class="footer-col-title">Services</p>
       <ul>
-        <li><a href="services.html">Skills Development &amp; Training</a></li>
-        <li><a href="services.html">AI Breakthrough</a></li>
-        <li><a href="services.html">ICT &amp; Technology</a></li>
-        <li><a href="services.html">Business Incubation</a></li>
+        <li><a href="skills.html">Skills Development &amp; Training</a></li>
+        <li><a href="ai.html">AI Breakthrough</a></li>
+        <li><a href="ict.html">ICT &amp; Technology</a></li>
+        <li><a href="incubation.html">Business Incubation</a></li>
         <li><a href="services.html">Capacity Building</a></li>
         <li><a href="services.html">Bursary Facilitation</a></li>
       </ul>
@@ -152,6 +182,7 @@
       <ul>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="incubation.html">Incubation</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

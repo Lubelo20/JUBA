@@ -108,11 +108,11 @@ if (form) {
         status.textContent = 'Thank you — we\'ll get back to you within one business day.';
         status.classList.add('ok');
       } else {
-        status.textContent = 'Something went wrong. Please email us directly at skhathi@jubasda.co.za.';
+        status.textContent = 'Something went wrong. Please email us directly at training.academy@jubaconsultants.co.za.';
         status.classList.add('err');
       }
     } catch (err) {
-      status.textContent = 'Something went wrong. Please email us directly at skhathi@jubasda.co.za.';
+      status.textContent = 'Something went wrong. Please email us directly at training.academy@jubaconsultants.co.za.';
       status.classList.add('err');
     }
   });
